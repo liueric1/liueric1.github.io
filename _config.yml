@@ -1,0 +1,23 @@
+# Jekyll Configuration
+title: "Eric Liu — Portfolio"
+description: "Personal website for Eric Liu: About, Experience, Projects, and Contact."
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Collections
+collections:
+  projects:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
