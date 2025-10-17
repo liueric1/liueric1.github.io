@@ -276,7 +276,6 @@
     border-radius: 8px;
     transition: all 0.2s ease;
     align-items: flex-start;
-    margin-bottom: 24px;
   }
   
   .timeline-item:hover {
@@ -284,10 +283,10 @@
     transform: translateX(4px);
   }
   
-  .timeline:hover .timeline-item:not(:hover) {
+  /* .timeline:hover .timeline-item:not(:hover) {
     opacity: 0.4;
     transition: opacity 0.2s ease;
-  }
+  } */
   
   .timeline-date {
     color: var(--muted);
