@@ -30,7 +30,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -151,9 +151,42 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-left: 2px solid var(--border);
 }
-.timeline-item { padding: 0 0 24px 16px; }
+.timeline-item { padding: 0 0 24px 0; }
+.timeline-link {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  margin: -16px;
+  align-items: flex-start;
+}
+.timeline-link:hover {
+  background: var(--border);
+  transform: translateX(4px);
+}
+
+/* Grey out other items when hovering over one */
+.timeline:hover .timeline-item:not(:hover) {
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.timeline-date {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  width: 140px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.timeline-content {
+  flex: 1;
+}
 .company {
   color: var(--text);
   font-size: 1.5rem;
@@ -161,9 +194,6 @@ body {
   margin: 0 0 8px 0;
 }
 .role-meta {
-  display: flex;
-  gap: 12px;
-  align-items: center;
   margin-bottom: 8px;
 }
 .role {
@@ -266,6 +296,57 @@ body {
 
 .contact-btn svg {
   flex-shrink: 0;
+}
+
+.lede a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.lede a:hover {
+  color: var(--brand);
+}
+
+.about-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image {
+  flex: 0 0 auto;
+}
+
+.about-image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid var(--brand); 
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse; /* Image appears below text on mobile */
+  }
+  
+  .about-image {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Footer */
