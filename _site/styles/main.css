@@ -17,17 +17,17 @@
     --focus: 2px solid #93c5fd;
   }
   
-  @media (prefers-color-scheme: light) {
+  /* @media (prefers-color-scheme: light) {
     :root {
       --bg: #ffffff;
-      --panel: #f8fafc;
+      --panel: #005f87;
       --text: #0f172a;
       --muted: #475569;
       --brand: #2563eb;
       --accent: #059669;
       --border: #e5e7eb;
     }
-  }
+  } */
   
   /* ===========================
      Base Styles
@@ -276,7 +276,7 @@
     border-radius: 8px;
     transition: all 0.2s ease;
     align-items: flex-start;
-  }
+  } 
   
   .timeline-item:hover {
     background: var(--border);
